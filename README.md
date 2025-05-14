@@ -2,7 +2,7 @@
 The objective is to build a simple webpage that changes the image it displays based on the current time of day. 
 
 ## Introduction
-This project is a simple HTML and JavaScript-based webpage that dynamically changes its displayed image based on the user's local time. The goal is to demonstrate how webpages can adapt content based on system time into deployment.
+This project is a simple HTML and JavaScript-based webpage that dynamically changes its displayed image based on the user's local time. The goal is to demonstrate how webpages can adapt content based on system time.
 
 ## Objectives
 - Build a webpage using HTML and JavaScript.
