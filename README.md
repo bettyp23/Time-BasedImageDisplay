@@ -30,3 +30,6 @@ The `index.html` file includes:
 
 ### 4.2 Deployment
 - It should be responsive and accessible via both desktop and mobile browsers.
+
+### URL:
+https://bettyp23.github.io/Time-BasedImageDisplay/
