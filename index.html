@@ -26,14 +26,14 @@
             text-align:center;
             color: darkblue;
         }
-
+        /* Styling for the capybara image */
         img {
             width: 100%;
             max-width:500px;
             height: auto;
-            border-radius: 10px;
+            border-radius: 10px; /* Rounded corners */
             margin-top: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4)
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) /* Soft drop shadow */
         }
      </style>
 </head>
@@ -43,7 +43,8 @@
             <h1>Betty Phipps</h1>
             <p>Course: COP4813-0003.su25</p>
             <p>Major: Computer Science</p>
-            <p>3Welcome to my capybara web page! I've implemented JavaScript logic to change the background color and capybara image depending on the time of day.</p>
+            <p>Welcome to my capybara web page! I've implemented JavaScript to change the background color and capybara image depending on the time of day.</p>
+            <!-- Image that will change based on time -->
             <img id="timeImage" src="" alt="Time of Day Image">
     </div>
 
@@ -67,8 +68,9 @@
                 bgColor = "#191970"; //Night - Midnight Blue
                 imageURL = "img/NightTimeCapy.jpg"; //mischevous capybara caught at night
             }
-
+            // Apply background color to the body
             document.body.style.backgroundColor = bgColor;
+            // Set the image source based on the time of day
             document.getElementById("timeImage").src=imageURL;
         };
      </script>
