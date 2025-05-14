@@ -17,35 +17,25 @@
             align-items: center;
             text-align: center;
             color: whitesmoke;
+            flex-direction: column;
             transition: background-color 0.5s ease; /* added a smooth transition */
+            font-family: Arial, sans-serif;
         }
         /* Styles for the container that holds the content */
         .container {
             text-align:center;
             color: whitesmoke;
         }
+
+        img {
+            width: 100%;
+            max-width:500px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4)
+        }
      </style>
-
-    <!-- JavaScript to change background color based on time -->
-     <script>
-        window.onload = function() {
-            //Get the current hour from the system
-            const hour = new Date().getHours();
-            let bgColor;
-
-            if (hour >= 6 && hour < 12){
-                bgColor = "#FFE4E1"; //Morning - Misty Rose
-            } else if (hour >= 12 && hour < 18){
-                bgColor = "#ADD8E6"; //Afternoon - Light Blue
-            } else if (hour >= 18 && hour < 21){
-                bgColor = "#CD853F"; //Evening - Peru
-            } else {
-                bgColor = "#191970"; //Night - Midnight Blue
-            }
-
-            document.body.style.backgroundColor = bgColor;
-        };
-     </script>
 </head>
 <body>
         <!-- Container holds the header and main content -->
@@ -53,7 +43,34 @@
             <h1>Betty Phipps</h1>
             <p>Course: COP4813-0003.su25</p>
             <p>Major: Computer Science</p>
-            <p>Welcome to my dynamic web page where I learned how to use JavaScript code that changes the background color of the page depending on the current time!</p>
+            <p>Welcome to my capybara web page! I've implemented JavaScript logic to change the background color and capybara image depending on the time of day.</p>
+            <img id="timeImage" src="" alt="Time of Day Image">
     </div>
+
+    <!-- JavaScript to change background color and image based on time -->
+     <script>
+        window.onload = function() {
+            //Get the current hour from the system
+            const hour = new Date().getHours();
+            let bgColor, imageURL;
+
+            if (hour >= 6 && hour < 12){
+                bgColor = "#FFE4E1"; //Morning - Misty Rose
+                imageURL = "https://www.istockphoto.com/photo/fenale-capybara-on-a-river-bank-gm1209753179-350191142?searchscope=image%2Cfilm"; //Capybara in the morning sun
+            } else if (hour >= 12 && hour < 18){
+                bgColor = "#ADD8E6"; //Afternoon - Light Blue
+                imageURL = "https://www.istockphoto.com/photo/close-up-of-a-capybara-a-on-a-river-bank-gm1213323775-352581368?searchscope=image%2Cfilm"; //Adventurous afternoon for capybara
+            } else if (hour >= 18 && hour < 21){
+                bgColor = "#CD853F"; //Evening - Peru
+                imageURL = "https://www.istockphoto.com/photo/capybara-hydrochoerus-hydrochaeris-biggest-mouse-in-water-with-evening-light-during-gm1251188227-365067427?searchscope=image%2Cfilm"; //capybara swimming in the evening sun
+            } else {
+                bgColor = "#191970"; //Night - Midnight Blue
+                imageURL = "https://media.istockphoto.com/id/1309795767/photo/night-view-of-capybara-in-esteros-del-ibera-argentina.jpg?s=2048x2048&w=is&k=20&c=Ztu45Z4N586WAJ6PCFMwV15I7MwnetbRfqwrT-FsbtE="; //mischevous capybara caught at night
+            }
+
+            document.body.style.backgroundColor = bgColor;
+            document.getElementById("timeImage").src=imageURL;
+        };
+     </script>
 </body>
 </html>
