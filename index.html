@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- encoding all characters -->
+    <meta charset="UTF-8">
+    <!-- responsive design on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Of Day HTML</title>
+
+    <!-- CSS styles for the page -->
+     <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: whitesmoke;
+            transition: background-color 0.5s ease; /* added a smooth transition */
+        }
+        /* Styles for the container that holds the content */
+        .container {
+            text-align:center;
+            color: whitesmoke;
+        }
+     </style>
+
+    <!-- JavaScript to change background color based on time -->
+     <script>
+        window.onload = function() {
+            //Get the current hour from the system
+            const hour = new Date().getHours();
+            let bgColor;
+
+            if (hour >= 6 && hour < 12){
+                bgColor = "#FFE4E1"; //Morning - Misty Rose
+            } else if (hour >= 12 && hour < 18){
+                bgColor = "#ADD8E6"; //Afternoon - Light Blue
+            } else if (hour >= 18 && hour < 21){
+                bgColor = "#CD853F"; //Evening - Peru
+            } else {
+                bgColor = "#191970"; //Night - Midnight Blue
+            }
+
+            document.body.style.backgroundColor = bgColor;
+        };
+     </script>
+</head>
+<body>
+        <!-- Container holds the header and main content -->
+    <div class="container">
+            <h1>Betty Phipps</h1>
+            <p>Course: COP4813-0003.su25</p>
+            <p>Major: Computer Science</p>
+            <p>Welcome to my dynamic web page where I learned how to use JavaScript code that changes the background color of the page depending on the current time!</p>
+    </div>
+</body>
+</html>
